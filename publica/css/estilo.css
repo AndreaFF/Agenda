@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    font-family: 'Pacifico', cursive;
+    padding: 15px;
+    color: white;
+    background-color: rgb(90, 120, 177);
+}
+
+header  h1 {
+    text-align: center;
+}
+
+nav {
+    width: 80%;
+    padding: 8px 0px;
+    margin: 30px auto;
+    color: white;
+    background-color: rgb(90, 120, 177);
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    box-shadow: 12px 0 15px -4px rgb(74, 70, 70), -12px 0 8px -4px rgb(74, 70, 70);
+}
+
+nav > ul {
+    width: 80%;
+    margin: 0px auto;
+}
+
+nav > ul > li {
+    display: inline-block;
+    width: 20%;
+}
+
+nav > ul > li > a {
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: rgb(90, 120, 177);
+    border-radius: 5px;
+}
+
+nav > ul > li > a:hover {
+    color: black;
+    background-color: cornflowerblue;
+}
+
+nav > ul > li > a > img {
+    width: 15%;
+    height: 15%;
+    vertical-align: middle;
+}
+
+nav > ul > li > a > span {
+    width: 60%;
+    display: inline-block;
+    margin-left: 2%;
+    vertical-align:middle;
+    font-size: .9em;
+}
+
+section {
+    width: 80%;
+    margin: 5px auto;
+    padding-bottom: 5px;
+    min-height: 100%;
+    background-color: white;
+    box-shadow: 12px 0 15px -4px rgb(74, 70, 70), -12px 0 8px -4px rgb(74, 70, 70);
+}
+
+section > header {
+    width: 80%;
+    margin: 0px auto;
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgb(41, 45, 52);
+}
+
+section > header > h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section > article {
+    width: 80%;
+    margin: 5% auto;
+    height: 40%;
+}
+
+section > article > ul {
+    height: 100%;
+}
+
+section > article > ul > li {
+    width: 30%;
+    height: 80%;
+    margin: 0px 1%;
+    display: inline-block;
+}
+
+section > article > ul > li > img {
+    display: block;
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px 3px rgba(150, 150, 229, 0.25);
+}
+
+section > article > ul > li > p {
+    width: 70%;
+    color: white;
+    background-color: rgb(41, 45, 52);
+    text-align: center;
+    margin: 5px auto 0px auto;
+    border-radius: 5px;
+}
+
+section > article > table {
+    width: 80%;
+    margin: 5px auto;
+    border-collapse: collapse;
+}
+
+section > article > table > tbody > tr {
+    text-align: center;
+}
+
+section > article > table > thead > tr:first-child {
+    color: white;
+    background-color: rgb(90, 120, 177);
+    border-bottom: 1px dotted black;
+}
+
+section > article > table > tbody > tr > td:first-child {
+    width: 30%;
+}
+
+section > article > table > tbody > tr > td:first-child > img {
+    width: 20%;
+    display: block;
+    margin: 10px auto;
+    padding: 3px;
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: 12px 0 15px -4px rgb(90, 120, 177), -12px 0 8px -4px rgb(90, 120, 177);
+}
+
+section > article > form {
+    width: 80%;
+    margin: 10px auto;
+}
+
+section > article > form > fieldset {
+    padding: 5%;
+    border: 1px dotted black;
+    border-radius: 5px;
+}
+
+section > article > form > fieldset > label {
+    width: 20%;
+    margin-top: 2%;
+    display: block;
+    float: left;
+    clear: left;
+    text-align: right;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+section > article > form > fieldset > input {
+    width: 40%;
+    display: block;
+    float: left;
+    text-align: left;
+    clear: right;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 5px;
+    font-size: .9em;
+    border: 1px dotted black;
+}
+
+section > article > form > fieldset > img {
+    display: block;
+    width: 20%;
+    margin: 15px auto;
+    border-radius: 50%;
+    box-shadow: 12px 0 15px -4px rgb(90, 120, 177), -12px 0 8px -4px rgb(90, 120, 177);
+}
+
+
+.boton {
+    width: 10%;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    clear: left;
+    color: white;
+    background-color: rgb(90, 120, 177);
+}
+
+.boton:hover {
+    background-color: cornflowerblue;
+}
+
+.accion {
+    width: 15%;
+    display: block;
+    margin: 0px auto;
+    padding: 2px;
+    background-color: rgb(90, 120, 177);
+    border-radius: 50%;
+    border: 1px dotted black;
+}
+
+.accion:hover {
+    background-color: cornflowerblue;
+    border: 1px dotted black;
+    opacity: .5;
+    transform: scale(1.5);
+}
+
+#contacto {
+    width: 80%;
+    margin: 5px auto;
+}
+
+#contacto > header {
+    width: 40%;
+    margin: 5px auto;
+    background-color: white;
+}
+
+#contacto > header > img{
+    display: block;
+    width: 40%;
+    margin: 5px auto;
+    border-radius: 50%;
+    box-shadow: 12px 0 15px -4px rgb(90, 120, 177), -12px 0 8px -4px rgb(90, 120, 177);
+}
+
+#contacto > ul > li {
+    display: block;
+    width: 70%;
+}
+
+#contacto > ul > li > span {
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#contacto > img {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 12px 0 15px 10px rgb(90, 120, 177);
+}
+
+#mensaje {
+    width: 80%;
+    margin: 10px auto;
+    color: red;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0px;
+    font-family: 'Pacifico', cursive;
+    color: #c9c3c3;
+    background-color: rgb(90, 120, 177);
+}
+
+footer > p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+    text-align: center;
+}
