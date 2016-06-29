@@ -11,17 +11,19 @@ require_once LAYOUTS.'/cabecera.php';
             </header>
 
             <article id="contacto">
+              <?php if (isset($contacto)): ?>
                 <header>
-                    <img src="<?= URLIMAGENES ?>/tux01.jpg" alt="Foto" />
+                    <img src="<?= URLIMAGENESDATOS ?>/<?= $contacto->getImagen() ?>" alt="Contacto <?= $contacto->getNombre() ?>" />
                 </header>
                 <ul>
-                    <li><span>Nombre:</span>Fernando</li>
-                    <li><span>Apellidos:</span>García García</li>
-                    <li><span>Dirección:</span>C\ Valdes Pedrita 12 - 1º A</li>
-                    <li><span>Teléfono:</span>985786543</li>
-                    <li><span>Email:</span>fernando.garcia@gmail.com</li>
+                    <li><span>Nombre:</span><?= $contacto->getNombre() ?></li>
+                    <li><span>Apellidos:</span><?= $contacto->getApellido() ?></li>
+                    <li><span>Dirección:</span><?= $contacto->getDireccion() ?></li>
+                    <li><span>Teléfono:</span><?= $contacto->getTelefono() ?></li>
+                    <li><span>Email:</span><?= $contacto->getEmail() ?></li>
                 </ul>
                 <img src="<?= URLIMAGENES ?>/mapa.jpg" src="mapa" />
+              <?php endif; ?>
             </article>
         </section>
 

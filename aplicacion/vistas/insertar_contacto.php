@@ -9,7 +9,7 @@ require_once LAYOUTS.'/cabecera.php';
             </header>
 
             <article>
-                <form action="#" method="post">
+                <form action="<?= URLAPLICACION ?>/index.php?accion=insertar" enctype="multipart/form-data" method="post">
                     <fieldset>
                         <label for="nombre">Nombre:</label>
                         <input type="text" name="nombre" value="" placeholder="Introduce nombre" required/>

@@ -14,8 +14,8 @@
 
         <nav>
             <ul>
-                <li><a href="#"><img src="<?= URLIMAGENES ?>/home.png" alt="Inicio" /><span>Inicio</span></a></li>
-                <li><a href="#"><img src="<?= URLIMAGENES ?>/list.png" alt="Listar Contacto" /><span>Listar Contactos</span></a></li>
-                <li><a href="#"><img src="<?= URLIMAGENES ?>/add.png" alt="Insertar Contacto" /><span>Insertar Contactos</span></a></li>
+                <li><a href="<?= URLAPLICACION ?>"><img src="<?= URLIMAGENES ?>/home.png" alt="Inicio" /><span>Inicio</span></a></li>
+                <li><a href="<?= URLAPLICACION ?>/index.php?accion=listar"><img src="<?= URLIMAGENES ?>/list.png" alt="Listar Contacto" /><span>Listar Contactos</span></a></li>
+                <li><a href="<?= URLAPLICACION ?>/index.php?accion=vistainsertar"><img src="<?= URLIMAGENES ?>/add.png" alt="Insertar Contacto" /><span>Insertar Contactos</span></a></li>
             </ul>
         </nav>

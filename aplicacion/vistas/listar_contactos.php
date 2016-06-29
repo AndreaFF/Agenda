@@ -18,28 +18,29 @@ require_once LAYOUTS.'/cabecera.php';
                         <th></th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="<?= URLIMAGENES ?>/tux01.jpg" alt="Foto Fernando" /></td>
-                            <td>Fernando</td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/view.png" alt="Ver" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/edit.png" alt="Editar" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/delete.png" alt="Borrar" /></a></td>
-                        </tr>
-                        <tr>
-                            <td><img src="<?= URLIMAGENES ?>/tux02.jpg" alt="Foto Luis" /></td>
-                            <td>Luis</td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>g/view.png" alt="Ver" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/edit.png" alt="Editar" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/delete.png" alt="Borrar" /></a></td>
-                        </tr>
-                        <tr>
-                            <td><img src="<?= URLIMAGENES ?>/tux03.jpg" alt="Foto Andres" /></td>
-                            <td>Andres</td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/view.png" alt="Ver" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/edit.png" alt="Editar" /></a></td>
-                            <td><a href="#"><img class="accion" src="<?= URLIMAGENES ?>/delete.png" alt="Borrar" /></a></td>
-                        </tr>
-
+                      <?php if (isset($contactos)): ?>
+                            <?php for ($i=0; $i<count($contactos); $i++): ?>
+                              <tr>
+                              <?php if (isset($contactos[$i])): ?>
+                                  <td>
+                                    <img src="<?= URLIMAGENESDATOS ?>/<?= $contactos[$i]->getImagen() ?>" alt="Contacto <?= $contactos[$i]->getNombre() ?>" />
+                                  </td>
+                                  <td>
+                                    <?= $contactos[$i]->getNombre() ?>
+                                  </td>
+                                  <td>
+                                    <a href="<?= URLAPLICACION ?>/index.php?accion=mostrar&id=<?= $contactos[$i]->getId() ?>"><img class="accion" src="<?= URLIMAGENES ?>/view.png" alt="Ver" /></a>
+                                  </td>
+                                  <td>
+                                    <a href="<?= URLAPLICACION ?>/index.php?accion=vistaeditar&id=<?= $contactos[$i]->getId() ?>"><img class="accion" src="<?= URLIMAGENES ?>/edit.png" alt="Editar" /></a>
+                                  </td>
+                                  <td>
+                                    <a href="<?= URLAPLICACION ?>/index.php?accion=borrar&id=<?= $contactos[$i]->getId() ?>"><img class="accion" src="<?= URLIMAGENES ?>/delete.png" alt="Borrar" /></a>
+                                  </td>
+                              <?php endif; ?>
+                              </tr>
+                            <?php endfor; ?>
+                      <?php endif; ?>
                     </tbody>
                 </table>
             </article>

@@ -10,7 +10,9 @@ require_once LAYOUTS.'/cabecera.php';
             </header>
 
             <article>
-                <p id="mensaje">Contacto Insertado</p>
+                <?php if (isset($mensaje)): ?>
+                <p id="mensaje"><?= $mensaje ?></p>
+              <?php endif; ?>
             </article>
         </section>
 
