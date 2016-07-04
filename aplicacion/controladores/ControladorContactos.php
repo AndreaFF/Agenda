@@ -52,7 +52,12 @@ class ControladorContactos {
         $id = $_REQUEST['id'];
         $oContacto = new Contacto();
         $oContacto->setId($id);
-        $this->modelo->borrarContacto ($oContacto);
+        $contacto_resultado = $this->modelo->buscarContacto($oContacto);
+        //borrar foto de la carpeta
+        if(strcmp($contacto_resultado->getImagen(),"foto.png")!=0){
+                unlink(IMAGENESDATOS."/".$contacto_resultado->getImagen());
+        }
+        $this->modelo->borrarContacto ($contacto_resultado);
         $datos ['mensaje'] = "El contacto ha sido borrado correctamente";
         $this->llamarVista('mostrar_mensajes', $datos);
     }

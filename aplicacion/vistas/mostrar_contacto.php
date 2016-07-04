@@ -22,8 +22,12 @@ require_once LAYOUTS.'/cabecera.php';
                     <li><span>Teléfono:</span><?= $contacto->getTelefono() ?></li>
                     <li><span>Email:</span><?= $contacto->getEmail() ?></li>
                 </ul>
-                <img src="<?= URLIMAGENES ?>/mapa.jpg" src="mapa" />
-              <?php endif; ?>
+              <div id="mapa">
+              </div>
+              <script type="text/javascript">
+                  load('<?= $contacto->getDireccion() ?>');
+              </script>
+            <?php endif; ?>
             </article>
         </section>
 

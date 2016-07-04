@@ -106,12 +106,21 @@ section > article > ul > li {
     display: inline-block;
 }
 
-section > article > ul > li > img {
+section > article > ul > li > a > img {
     display: block;
     width: 50%;
     margin: 0px auto;
     border-radius: 50%;
     box-shadow: 3px 3px 3px 3px rgba(150, 150, 229, 0.25);
+}
+
+section > article > ul > li > a > img:hover {
+    display: block;
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 50%;
+    box-shadow: 12px 0 15px -4px rgb(90, 120, 177), -12px 0 8px -4px rgb(90, 120, 177);
+    transform: rotate(-15deg);
 }
 
 section > article > ul > li > p {
@@ -260,10 +269,11 @@ section > article > form > fieldset > img {
     font-weight: bold;
 }
 
-#contacto > img {
+#mapa {
     display: block;
-    width: 40%;
-    margin: 10px auto;
+    width: 60%;
+    height: 300px;
+    margin: 30px auto;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 12px 0 15px 10px rgb(90, 120, 177);
@@ -277,6 +287,21 @@ section > article > form > fieldset > img {
     border-radius: 5px;
     text-align: center;
     padding: 10px;
+}
+
+#mapa #direccionContacto {
+    color: red;
+    font-weight: bold;
+}
+
+#mapa #direccion {
+    color:  rgb(90, 120, 177);
+    font-weight: bold;
+}
+
+#mapa #errorDireccion {
+    color: red;
+    font-weight: bold;
 }
 
 footer {
